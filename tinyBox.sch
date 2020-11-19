@@ -36,39 +36,26 @@ F 3 "~" H 5550 1550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCU_Microchip_SAMD:ATSAMD21E15A-M U1
-U 1 1 5FACF219
-P 5850 3800
-F 0 "U1" H 6494 3846 50  0000 L CNN
-F 1 "ATSAMD21E15A-M" H 6494 3755 50  0000 L CNN
-F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm" H 7200 1950 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/SAM_D21_DA1_Family_Data%20Sheet_DS40001882E.pdf" H 5850 3800 50  0001 C CNN
-	1    5850 3800
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R1
 U 1 1 5FAD1CBC
-P 4700 3200
-F 0 "R1" V 4493 3200 50  0000 C CNN
-F 1 "1.5k" V 4584 3200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4630 3200 50  0001 C CNN
-F 3 "~" H 4700 3200 50  0001 C CNN
-	1    4700 3200
-	0    -1   1    0   
+P 4800 3350
+F 0 "R1" V 4593 3350 50  0000 C CNN
+F 1 "1.5k" V 4684 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4730 3350 50  0001 C CNN
+F 3 "~" H 4800 3350 50  0001 C CNN
+	1    4800 3350
+	1    0    0    1   
 $EndComp
-Wire Wire Line
-	4850 3200 5150 3200
 $Comp
 L Device:LED D1
 U 1 1 5FAD3454
-P 4200 3200
-F 0 "D1" H 4193 3417 50  0000 C CNN
-F 1 "LED" H 4193 3326 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4200 3200 50  0001 C CNN
-F 3 "~" H 4200 3200 50  0001 C CNN
-	1    4200 3200
-	1    0    0    -1  
+P 4800 3700
+F 0 "D1" H 4793 3917 50  0000 C CNN
+F 1 "LED" H 4793 3826 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4800 3700 50  0001 C CNN
+F 3 "~" H 4800 3700 50  0001 C CNN
+	1    4800 3700
+	0    -1   -1   0   
 $EndComp
 $Comp
 L LED:APA102 D2
@@ -79,14 +66,10 @@ F 1 "APA102" H 4050 2650 50  0000 C CNN
 F 2 "LED_SMD:LED_RGB_5050-6" H 4300 2000 50  0001 L TNN
 F 3 "http://www.led-color.com/upload/201506/APA102%20LED.pdf" H 4350 1925 50  0001 L TNN
 	1    4250 2300
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	5150 2200 4550 2200
-Wire Wire Line
-	4550 2300 5150 2300
 $Comp
-L Connector:USB_B_Micro J1
+L tinyBox-rescue:USB_B_Micro-Connector J1
 U 1 1 5FAD9937
 P 4000 4600
 F 0 "J1" H 4057 5067 50  0000 C CNN
@@ -101,7 +84,7 @@ Wire Wire Line
 Wire Wire Line
 	4300 4600 5150 4600
 $Comp
-L Regulator_Linear:AP2112K-3.3 U2
+L tinyBox-rescue:AP2112K-3.3-Regulator_Linear U2
 U 1 1 5FAE067C
 P 8550 3500
 F 0 "U2" H 8550 3842 50  0000 C CNN
@@ -110,17 +93,6 @@ F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8550 3825 50  0001 C CNN
 F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 8550 3600 50  0001 C CNN
 	1    8550 3500
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Schottky D3
-U 1 1 5FAE2C13
-P 7300 2800
-F 0 "D3" V 7346 2720 50  0000 R CNN
-F 1 "D_Schottky" V 7255 2720 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7300 2800 50  0001 C CNN
-F 3 "~" H 7300 2800 50  0001 C CNN
-	1    7300 2800
-	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:D_Schottky D4
@@ -190,8 +162,6 @@ F 3 "~" H 9700 3400 50  0001 C CNN
 $EndComp
 Text GLabel 4315 4400 2    50   Input ~ 0
 VBUS
-Text GLabel 7300 2500 1    50   Input ~ 0
-VBAT
 Text GLabel 7900 2500 1    50   Input ~ 0
 VBUS
 $Comp
@@ -209,23 +179,17 @@ Wire Wire Line
 	5550 1150 5550 1400
 Wire Wire Line
 	5550 1700 5550 1900
-Wire Wire Line
-	4550 3200 4350 3200
 $Comp
 L power:GND #PWR0102
 U 1 1 5FAEC182
-P 3750 3350
-F 0 "#PWR0102" H 3750 3100 50  0001 C CNN
-F 1 "GND" H 3755 3177 50  0000 C CNN
-F 2 "" H 3750 3350 50  0001 C CNN
-F 3 "" H 3750 3350 50  0001 C CNN
-	1    3750 3350
+P 4800 3950
+F 0 "#PWR0102" H 4800 3700 50  0001 C CNN
+F 1 "GND" H 4805 3777 50  0000 C CNN
+F 2 "" H 4800 3950 50  0001 C CNN
+F 3 "" H 4800 3950 50  0001 C CNN
+	1    4800 3950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4050 3200 3750 3200
-Wire Wire Line
-	3750 3200 3750 3350
 $Comp
 L power:GND #PWR0103
 U 1 1 5FAED21D
@@ -271,8 +235,6 @@ Wire Wire Line
 	5850 5700 5850 5900
 NoConn ~ 4300 4800
 Wire Wire Line
-	7300 2500 7300 2650
-Wire Wire Line
 	7900 2500 7900 2650
 Wire Wire Line
 	8250 3400 8150 3400
@@ -280,12 +242,7 @@ Wire Wire Line
 	8150 3400 8150 3500
 Wire Wire Line
 	8150 3500 8250 3500
-Wire Wire Line
-	7300 2950 7300 3400
-Wire Wire Line
-	7300 3400 7650 3400
 Connection ~ 8150 3400
-Connection ~ 7650 3400
 Wire Wire Line
 	7650 3400 7900 3400
 Wire Wire Line
@@ -455,14 +412,6 @@ F 3 "" H 10150 4100 50  0001 C CNN
 	1    10150 4100
 	1    0    0    -1  
 $EndComp
-NoConn ~ 5150 2400
-NoConn ~ 5150 2500
-NoConn ~ 5150 2600
-NoConn ~ 5150 2700
-NoConn ~ 5150 2800
-NoConn ~ 5150 2900
-NoConn ~ 5150 3000
-NoConn ~ 5150 3100
 NoConn ~ 5150 3300
 NoConn ~ 5150 3600
 NoConn ~ 5150 3700
@@ -474,4 +423,54 @@ NoConn ~ 5150 4500
 NoConn ~ 5150 4400
 NoConn ~ 5150 4900
 NoConn ~ 5150 5000
+$Comp
+L MCU_Microchip_SAMD:ATSAMD21E15A-M U1
+U 1 1 5FACF219
+P 5850 3800
+F 0 "U1" H 6494 3846 50  0000 L CNN
+F 1 "ATSAMD21E15A-M" H 6494 3755 50  0000 L CNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 7200 1950 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/SAM_D21_DA1_Family_Data%20Sheet_DS40001882E.pdf" H 5850 3800 50  0001 C CNN
+	1    5850 3800
+	1    0    0    -1  
+$EndComp
+Text GLabel 5000 2500 0    50   Input ~ 0
+D1_A0
+Text GLabel 5000 2600 0    50   Input ~ 0
+D2_A1
+Text GLabel 5000 2400 0    50   Input ~ 0
+D0_A4
+Text GLabel 5000 2700 0    50   Input ~ 0
+D3_A3
+Text GLabel 5000 2800 0    50   Input ~ 0
+D4_A2
+Wire Wire Line
+	5150 3200 4800 3200
+Wire Wire Line
+	5000 2400 5150 2400
+Wire Wire Line
+	4550 2200 5150 2200
+Wire Wire Line
+	4550 2300 5150 2300
+Text GLabel 5000 2900 0    50   Input ~ 0
+D5_A5
+Text GLabel 5000 3000 0    50   Input ~ 0
+D6
+Wire Wire Line
+	5000 2500 5150 2500
+Wire Wire Line
+	5000 2600 5150 2600
+Wire Wire Line
+	5000 2700 5150 2700
+Wire Wire Line
+	5000 2800 5150 2800
+Wire Wire Line
+	5000 2900 5150 2900
+Wire Wire Line
+	5000 3000 5150 3000
+NoConn ~ 5150 3100
+Wire Wire Line
+	4800 3850 4800 3950
+Wire Wire Line
+	4800 3500 4800 3550
 $EndSCHEMATC

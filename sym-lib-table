@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name tinyBox-rescue)(type Legacy)(uri ${KIPRJMOD}/tinyBox-rescue.lib)(options "")(descr ""))
+)
