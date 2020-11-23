@@ -152,12 +152,12 @@ $EndComp
 $Comp
 L Device:R R2
 U 1 1 5FAE6F9E
-P 9700 3400
-F 0 "R2" H 9770 3446 50  0000 L CNN
-F 1 "10K" H 9770 3355 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9630 3400 50  0001 C CNN
-F 3 "~" H 9700 3400 50  0001 C CNN
-	1    9700 3400
+P 9700 3540
+F 0 "R2" H 9770 3586 50  0000 L CNN
+F 1 "10K" H 9770 3495 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9630 3540 50  0001 C CNN
+F 3 "~" H 9700 3540 50  0001 C CNN
+	1    9700 3540
 	1    0    0    -1  
 $EndComp
 Text GLabel 3050 4450 2    50   Input ~ 0
@@ -281,11 +281,7 @@ Wire Wire Line
 Wire Wire Line
 	9200 3400 9200 3800
 Wire Wire Line
-	9700 3550 9700 3800
-Wire Wire Line
-	9700 3250 9200 3250
-Wire Wire Line
-	9200 3250 9200 3400
+	9700 3690 9700 3800
 Connection ~ 9200 3400
 $Comp
 L power:+3.3V #PWR011
@@ -309,9 +305,6 @@ F 3 "" H 10150 2700 50  0001 C CNN
 	1    10150 2700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9200 2700 9200 3250
-Connection ~ 9200 3250
 Wire Wire Line
 	10150 2700 10150 3800
 Wire Wire Line
@@ -472,4 +465,62 @@ $EndComp
 NoConn ~ 3850 3050
 Wire Wire Line
 	3050 4450 3000 4450
+Text Notes 8100 7640 0    50   ~ 0
+11/22/2020
+Text Notes 7020 6660 0    50   ~ 0
+ATSAMD21E18BA-A based clone of adafruit's trinket m0, designed for EE101
+Text Notes 7330 7500 0    50   ~ 0
+tinyb0x
+Wire Wire Line
+	9200 2700 9200 2990
+Wire Wire Line
+	9700 3390 9700 2990
+Wire Wire Line
+	9700 2990 9200 2990
+Connection ~ 9200 2990
+Wire Wire Line
+	9200 2990 9200 3400
+$Comp
+L Connector_Generic:Conn_01x08 J2
+U 1 1 5FBB6050
+P 6740 1240
+F 0 "J2" V 6704 752 50  0000 R CNN
+F 1 "Conn_01x08" V 6613 752 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 6740 1240 50  0001 C CNN
+F 3 "~" H 6740 1240 50  0001 C CNN
+	1    6740 1240
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7140 1580 3    50   Input ~ 0
+D5_A5
+Text GLabel 7040 1580 3    50   Input ~ 0
+D4_A2
+Text GLabel 6940 1570 3    50   Input ~ 0
+D3_A3
+Text GLabel 6840 1570 3    50   Input ~ 0
+D2_A1
+Text GLabel 6740 1570 3    50   Input ~ 0
+D1_A0
+Text GLabel 6640 1560 3    50   Input ~ 0
+D0_A4
+Text GLabel 6540 1560 3    50   Input ~ 0
+3V3
+Text GLabel 6440 1550 3    50   Input ~ 0
+GND
+Wire Wire Line
+	6440 1550 6440 1440
+Wire Wire Line
+	6540 1440 6540 1560
+Wire Wire Line
+	6640 1440 6640 1560
+Wire Wire Line
+	6740 1440 6740 1570
+Wire Wire Line
+	6840 1440 6840 1570
+Wire Wire Line
+	6940 1440 6940 1570
+Wire Wire Line
+	7040 1440 7040 1580
+Wire Wire Line
+	7140 1440 7140 1580
 $EndSCHEMATC
