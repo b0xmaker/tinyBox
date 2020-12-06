@@ -502,7 +502,7 @@ D2_A1
 Text GLabel 6740 1570 3    50   Input ~ 0
 D1_A0
 Text GLabel 6640 1560 3    50   Input ~ 0
-D0-A4
+D0_A4
 Text GLabel 6540 1560 3    50   Input ~ 0
 3V3
 Text GLabel 6440 1550 3    50   Input ~ 0
